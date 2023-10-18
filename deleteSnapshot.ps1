@@ -2,10 +2,7 @@
 $subscriptionId = "d81e9b22-68b1-4ea6-b08f-c3d8a831d67d"
 $resourceGroupName = "testkham"
 
- param (
-        [string] $SnapshotName,
-        [string] $ACIResourceGroup
-    )
+param([string] $SnapshotName,[string] $ACIResourceGroup)
 
 # Sign in to Azure (you may need to provide credentials)
 Connect-AzAccount
