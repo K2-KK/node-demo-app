@@ -1,4 +1,4 @@
-param($SnapshotName, $ACIResourceGroup)
+param($SnapshotName, $ResourceGroupName)
 
 # Define your Azure subscription and resource group
 $subscriptionId = "d81e9b22-68b1-4ea6-b08f-c3d8a831d67d"
@@ -10,7 +10,7 @@ Connect-AzAccount
 Set-AzContext -SubscriptionId $subscriptionId
 
 Write-Output "Deleting snapshot $snapshotName..."
-Remove-AzSnapshot -ResourceGroupName $ACIResourceGroup -SnapshotName $SnapshotName -Force
+Remove-AzSnapshot -ResourceGroupName $ResourceGroupName -SnapshotName $SnapshotName -Force
 Write-Output "Snapshot $snapshotName deleted."
 
 Write-Output "Snapshot cleanup completed."
